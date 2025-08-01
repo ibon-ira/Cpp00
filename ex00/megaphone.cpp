@@ -16,7 +16,7 @@ int	main (int argc, char *argv[])
 			j = 0;
 			while (argv[i + 1][j])
 			{
-				if (std::isalpha(argv[i + 1][j]))
+				if (std::islower(argv[i + 1][j]))
 					std::cout << (char)std::toupper(argv[i + 1][j]);
 				else
 					std::cout << argv[i + 1][j];
