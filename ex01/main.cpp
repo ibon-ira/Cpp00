@@ -1,4 +1,4 @@
-#include "Contact.hhp"
+#include "Contact.hpp"
 
 int	complete_contact_info(Contact &con)
 {
@@ -35,9 +35,9 @@ int	complete_contact_info(Contact &con)
 int	main()
 {
 	std::string input;
-	Contact	Contact;
+	Contact	con;
 
-	while (input != "EXIT")
+	while (1)
 	{
 		std::cout << "Write a command: ";
 		if (!(std::getline(std::cin, input)))
@@ -45,13 +45,23 @@ int	main()
 		std::cout << "Leíste: " << input << std::endl;
 		if (input == "ADD")
 		{
-			if (complete_contact_info(Contact))
-				std::cout << "Error: Cannot add a conctact with empty fields.\n";
+			if (complete_contact_info(con))
+				std::cout << "Error: Cannot add a conctact with empty fields." << std::endl;
 			else
-				std::cout << "Contact saved successfully.\n";
+				std::cout << "Contact saved successfully." << std::endl;
+		}
+		else if (input == "SHOW")
+		{
+            std::cout << "First Name: " << con.getFirstName() << std::endl;
+            std::cout << "Last Name: " << con.getLastName() << std::endl;
+            std::cout << "Nickname: " << con.getNickname() << std::endl;
+            std::cout << "Phone Number: " << con.getPhoneNumber() << std::endl;
+            std::cout << "Darkest Secret: " << con.getDarkestSecret() << std::endl;
 		}
 		//if (input == "SEARCH")
-			//phonebook.search();*/
+			//phonebook.search();
+		if (input == "EXIT")
+			break ;
 	}
 	return (0);
 }
