@@ -17,7 +17,7 @@ int	main (int argc, char *argv[])
 			while (argv[i + 1][j])
 			{
 				if (std::islower(argv[i + 1][j]))
-					std::cout << (char)std::toupper(argv[i + 1][j]);
+					std::cout << static_cast<char>(std::toupper(argv[i + 1][j]));
 				else
 					std::cout << argv[i + 1][j];
 				j++;
