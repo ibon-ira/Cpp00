@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iboiraza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/11 11:21:53 by iboiraza          #+#    #+#             */
+/*   Updated: 2025/08/11 11:21:55 by iboiraza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CONTACT_H
 # define CONTACT_H
 # include <iostream>
@@ -12,7 +24,6 @@ class Contact
 	    std::string _Nickname;
 	    std::string _Phone_number;
 	    std::string _Darkest_secret;
-	    time_t 		_Created;
 
     public:
         Contact();
@@ -32,8 +43,6 @@ class Contact
 		std::string	getNickname() const;
 		std::string	getPhoneNumber() const;
 		std::string	getDarkestSecret() const;
-		time_t		getCreated() const;
-
 };
 
 #endif

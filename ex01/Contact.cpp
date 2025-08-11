@@ -1,21 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iboiraza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/11 11:21:45 by iboiraza          #+#    #+#             */
+/*   Updated: 2025/08/11 11:21:48 by iboiraza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.hpp"
 
-Contact::Contact() {
-    // Constructor por defecto
-}
+Contact::Contact() {}
 
-Contact::~Contact() {
-    // Destructor
-}
-
-/*Contact::Contact()
-    : _First_name(""),
-      _Last_name(""),
-      _Nickname(""),
-      _Phone_number(""),
-      _Darkest_secret(""),
-      _Created(std::time(nullptr)) // inicializa directamente con la hora actual
-{}*/
+Contact::~Contact() {}
 
 Contact::Contact(std::string first_name,
                  std::string last_name,
@@ -28,16 +27,6 @@ Contact::Contact(std::string first_name,
       _Phone_number(phone_number),
       _Darkest_secret(darkest_secret)
 {}
-
-/*Contact::Contact(std::string First_name, std::string Last_name,
-                 std::string Nickname, std::string Phone_number,
-                 std::string Darkest_secret)
-    : _First_name(First_name),
-      _Last_name(Last_name),
-      _Nickname(Nickname),
-      _Phone_number(Phone_number),
-      _Darkest_secret(Darkest_secret) {
-}*/
 
 std::string Contact::getFirstName() const
 {
@@ -62,9 +51,4 @@ std::string Contact::getPhoneNumber() const
 std::string Contact::getDarkestSecret() const
 {
     return _Darkest_secret;
-}
-
-time_t Contact::getCreated() const
-{
-    return _Created;
 }

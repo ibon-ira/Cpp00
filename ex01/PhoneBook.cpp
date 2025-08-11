@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iboiraza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/11 11:22:15 by iboiraza          #+#    #+#             */
+/*   Updated: 2025/08/11 11:22:17 by iboiraza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PhoneBook.hpp"
 
 int	complete_contact_info(Contact &con)
@@ -27,8 +39,10 @@ int	complete_contact_info(Contact &con)
 	return (0);
 }
 
-void PhoneBook::add() {
-    if (complete_contact_info(_contacts[_nextIndex])) {
+void PhoneBook::add()
+{
+    if (complete_contact_info(_contacts[_nextIndex]))
+    {
         std::cout << "Error: Cannot add a contact with empty fields." << std::endl;
         return;
     }
